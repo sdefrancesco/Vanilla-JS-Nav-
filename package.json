@@ -1,0 +1,25 @@
+{
+  "name": "musicflexsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "animejs": "^2.2.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "sass-loader": "^7.0.2",
+    "waypoints": "^4.0.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.9.0",
+    "style-loader": "^0.21.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack && nodemon"
+  },
+  "author": "",
+  "license": "ISC"
+}

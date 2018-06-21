@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+</head>
+<body>
+    <div class="preloader">
+        
+    </div>
+    <div class="nav-container">
+        <div class="container">
+            <div class="logo">
+                <img src="http://www.logomakerapp.com/images/logo.png" alt="">
+            </div>
+            <nav>
+                <a href="">Home</a>
+                <a href="" id='about-target'>About</a>
+                <a href="" class='dropdown-target' data-target='events'>Events</a>
+                <a href="" class='dropdown-target' data-target='contact'>Contact</a>
+                <a href="">Packages</a>
+                <a class='btn btn-primary-outline' onclick='openModal()'>Book Your Event</a>
+            </nav>
+            <div class="dropdown">
+                <div class="events">
+                    <h5>Events</h5>
+                    <ul>
+                        <li>Weddings</li>
+                        <li>Engagements</li>
+                        <li>Birthdays</li>
+                        <li>Holidays</li>
+                        <li>Item1</li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li>Basic Audio Packages</li>
+                        <li>Basic Uplighting Package</li>
+                        <li>Full Audio Packages</li>
+                        <li>Full Uplighting Package</li>
+                        <li>Grand Package</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner light banner-fixed" id='Home' scroll-target='Home'>
+        <video autoplay='true' type='video/mp4' autoplay muted loop class='background-video'>
+            <source src='http://techslides.com/demos/sample-videos/small.mp4' type='video/mp4'>
+            <source src='http://techslides.com/demos/sample-videos/small.ogv' type=video/ogg>
+            <source src='http://techslides.com/demos/sample-videos/small.webm' type=video/webm> 
+        </video>
+        <div class="container">
+            <h1>MUSIC FLEX</h1>
+            <h3>Video Disk Jockeys</h3>
+            <h4>Leaders Of The Party Industry For Over 25 Years</h4>
+            <a href="" class='btn btn-primary'>Book Your Party</a>
+        </div>
+    </div>
+
+    <div class="next blue full flex flex-center flex-column display" id='About' scroll-target='About'>
+        <h1 class='uppercase'>Let Us Rock Your Party</h1>
+        <h5>A moment for your family and friends to never forget</h5>
+    </div>
+
+    <div class="red full flex flex-center flex-column display" id='Events' scroll-target='Events'>
+        <h1>Hey there</h1>
+    </div>
+    <div class="blue full flex flex-center flex-column display" id='Contact' scroll-target='Contact'>
+        <h1>Contact Us</h1>
+    </div>
+    <div class="red full flex flex-center flex-column display" id='Packages' scroll-target='Packages'>
+        <h1>PACKAGES</h1>
+    </div>
+
+
+    <div class="modal-container">
+        <div class="modal">
+            <div class="modal-header">
+                <h1>Book Your Party MUSIC FLEX</h1>
+                <h3 class='text-grey'>You Wont Be Dissappointed</h3>
+            </div>
+            <form action="">
+                <div class="row-half">
+                    <div class="col m6">
+                        <div class="form-input">
+                            <label for="">First Name</label>
+                            <input type="text" placeholder='First Name' />
+                        </div>
+                        
+                    </div>
+                    <div class="col m6">
+                        <div class="form-input">
+                            <label for="">Last Name</label>
+                            <input type="text" placeholder='Last Name' />
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-input">
+                    <label for="">Email</label>
+                    <input type="text" placeholder='Email' />
+                </div>
+                <div class="form-input">
+                    <label for="">Party Type</label>
+                    <select name="" id="">
+                        <option value="">Wedding</option>
+                        <option value="">Bat Mitzvah / Bar Mitzvah</option>
+                        <option value="">Engagement</option>
+                        <option value="">Corporate</option>
+                        <option value="">Holiday</option>
+                        <option value="">Other..</option>
+                    </select>
+                </div>
+                <div class="form-input">
+                    <label for="">Party Location</label>
+                    <input type="text" placeholder='Event Location' />
+                </div>
+                <div class="form-input">
+                    <label for="">First Name</label>
+                    <input type="text" placeholder='First Name' />
+                </div>
+            </form>
+            
+            <a class='closeModal' onclick='openModal(true)'>close modal</a>
+        </div>
+    </div>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js'></script>
+    <script src='/js/bundles/bundle.js'></script>
+    <script src='/js/modal.js'></script>
+    <script src='/js/main.js'></script>
+</body>
+</html>

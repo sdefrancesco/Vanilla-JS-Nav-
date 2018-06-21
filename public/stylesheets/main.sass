@@ -1,0 +1,272 @@
+
+//  Import The Variables from Vars.sass
+@import './vars'
+
+body
+    margin: 0px
+    padding: 0px
+    background-color: $primaryColor
+    font-family: $fontStack
+    height: 3000px
+    -webkit-font-smoothing: antialiased
+
+
+.preloader
+    width: 100%
+    height: 100vh
+    background-color: black
+    
+.row
+    width: 100%
+    height: auto
+    display: grid
+    grid-gap: .5rem
+    .col
+    .m6
+        box-sizing: border-box
+        width: 50%
+
+.light
+    color: white
+.banner-fixed
+    background-attachment: fixed
+.banner
+    width: 100%
+    height: 100vh
+    // background-color: #333
+    // background-image: url('/images/image3.jpg')
+    background-size: cover
+    .container
+        z-index: 1
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-flow: column
+        height: inherit
+    h1
+        padding: 0px
+        margin: 0px
+        font-size: 6rem
+        text-align: center
+
+.box-shadow-1
+    box-shadow: 0px 0px 1px black
+
+.container
+    width: 80%
+    margin-left: auto
+    margin-right: auto
+
+.text-grey 
+    color: grey    
+
+
+.scrolled.nav-container
+    background-color: rgba(0,0,0,.8)
+    height: 50px
+    .logo
+        transition: 1s ease-in-out all
+        img
+            width: 50px
+
+.nav-container
+    background: linear-gradient(black, transparent)
+    height: 120px
+    position: fixed
+    width: 100%
+    transform-origin: top center
+    z-index: 999
+    .container
+        height: inherit
+        display: flex
+        align-items: center
+        justify-content: space-between
+    .logo
+        flex-shrink: 1
+        img
+            width: 20%
+    .dropdown
+        position: fixed
+        top: 0
+        right: 25rem
+        z-index: 99999
+        color: white
+    nav
+        width: auto
+        .dropdown-target
+        a
+            margin: 1.5rem
+            text-transform: uppercase
+            font-family: $fontStack
+            font-size: .8rem
+            padding: 0px
+            color: white
+            text-decoration: none
+            font-weight: bold
+            letter-spacing: .1rem
+            transition: .3s ease-in-out all
+            flex-grow: 1
+            flex-shrink: 1
+
+    .dropdown
+        display: none
+        transform-origin: top center
+        background-color: black
+        padding: 20px
+        transition: .2s all ease-in-out
+        .contact
+            h5
+                padding: 0px
+                margin: 0px 0px 10px
+            display: none
+        .events
+            h5
+                padding: 0px
+                margin: 0px
+            display: none
+        ul
+            padding: 0px
+            margin: 0px
+            list-style-type: none
+            li
+                margin: .1rem 0px
+                padding: .8rem 0px
+                border-radius: .1rem
+                transform-origin: top center
+                color: grey
+                transition: .2s all ease-in-out
+                border-left: 0px
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: .1rem;
+                font-size: .8rem;
+                &:hover
+                    cursor: pointer
+                    background-color: #333
+                    color: white
+                    text-indent: 1rem
+                    border-left: 2px solid red
+                    background-color: rgb(21, 21, 21)
+
+    
+                
+
+    .btn
+        margin: 0px
+        padding: .5rem 3rem
+        height: auto
+        width: auto
+        border: 0px
+        border-radius: 1px
+        text-transform: uppercase
+        letter-spacing: 0rem
+        word-wrap: none
+        word-brak: none
+    .btn-primary
+        background-color: $primaryColor
+        color: white
+        text-shadow: 0px 0px 1px black
+    .btn-primary-outline
+        color: darken(white, 40%)
+        border: 2px solid $primaryColor
+        background-color: transparent
+        transition: .3s ease-in-out all
+        &:hover
+            background-color: $primaryColor
+            color: white
+
+
+.full
+    width: 100%
+    height: 100vh
+    margin: 0px
+    h1, h2, h3, h4 , h5, h6
+        color: white
+        margin: 0px
+        padding: 0px
+.flex
+    display: flex
+.flex-center
+    align-items: center
+    justify-content: center
+.flex-column
+    flex-flow: column
+.blue
+    background-color: blue
+.red
+    background-color: red
+.uppercase
+    text-transform: uppercase
+.text-primary
+    color: $primaryColor
+
+.display
+    h1
+        font-size: 4rem
+    h5
+        font-size: 1.8rem
+
+
+.modal-container
+    width: 100%
+    height: 100vh
+    background-color: rgba(0,0,0,.8)
+    position: fixed
+    top: 0px
+    display: none
+    align-items: center
+    justify-content: center
+    .modal
+        .modal-header
+            padding-bottom: 1rem
+            margin-bottom: 1rem
+            border-bottom: 1px solid rgba(0,0,0,.2)
+        width: 40%
+        height: auto
+        background-color: white
+        max-height: 500px
+        border-radius: 3px
+        padding: 2rem 3rem
+        overflow-Y: scroll
+        h1, h2, h3, h4 ,h5 ,h6
+            padding: 0px
+            margin: 0px
+        
+form
+    .row-half
+        display: grid
+        grid-template-columns: 50% 50%
+        grid-gap: 1rem
+        grid-template-columns: repeat(2, 1fr)
+    .form-input
+        margin: 1rem 0px
+        input[type='text']
+            font-size: .98rem
+            width: 100%
+            padding: .5rem
+            border-radius: 1px
+            border: 1px solid #ced2dc
+            box-sizing: border-box
+            outline: 0px auto
+            transition: .2s ease-in-out all
+            &:focus
+                border: 1px solid rgb(89, 136, 255)
+                outline: rgb(32, 131, 255) auto
+        label
+            display: block
+            margin-bottom: .4rem
+            font-size: .95rem
+
+
+.background-video
+    width: 100%
+    height: 100vh
+    object-fit: cover
+    position: absolute
+    z-index: -1
+// Media Queries
+@media (max-width: 1200px)
+    .banner
+        h1
+            font-size: 5rem    
+        
