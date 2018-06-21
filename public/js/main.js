@@ -136,9 +136,9 @@ window.onscroll = function() {
         element: document.querySelector('body'),
         offset: 350,
         handler: function(direction) {
-            console.log(direction)
+            // console.log(direction)
             if(direction == 'down') {
-                console.log('down')
+                // console.log('down')
                 if(!document.querySelector('.nav-container').classList.contains('scrolled')) {
                     var navIn = anime({
                         targets: '.nav-container',
@@ -237,7 +237,7 @@ for(var i=0; i < document.querySelector('nav').children.length ; i++) {
 
 var aboutWaypoint = new Waypoint({
     element: document.querySelector('#About'),
-    handler: function() {
+    handler: function(direction) {
         let aboutAnimation = anime.timeline({
             autoplay: false
         }).add({
@@ -245,7 +245,7 @@ var aboutWaypoint = new Waypoint({
             easing: 'easeInOutQuint',
             opacity: [0, 1],
             scale: [1.5, 1],
-            duration: 400
+            duration: 400,
         }).add({
             targets: document.querySelector('#About h5'),
             opacity: [0, 1],
@@ -254,6 +254,28 @@ var aboutWaypoint = new Waypoint({
             easing: 'easeInOutQuint'
         })
         aboutAnimation.play()
+        // updateScrollToText(getNextWaypoint('About'))
+        updateScrollToText(getNextWaypoint('About', direction))
     }
 })
 
+function getNextWaypoint(thisWaypoint, scrollDirection) {
+    let waypoints = document.getElementsByClassName('sec')
+    for(var i = 0; i < waypoints.length; i++) {
+        // console.log(waypoints[i].getAttribute('scroll-target'), thisWaypoint, 'yoyo')
+        if(waypoints[i].getAttribute('scroll-target') === thisWaypoint) {
+            if(scrollDirection == 'down') {
+                var getNextWaypoints = waypoints[i + 1].getAttribute('scroll-target')
+            } else {
+                var getNextWaypoints = waypoints[i - 1].getAttribute('scroll-target')
+            }
+            return getNextWaypoints
+        }
+    }
+}
+
+
+
+function updateScrollToText(nextTarget) {
+    document.querySelector('.scroll-to h1 span').innerHTML = nextTarget
+}
